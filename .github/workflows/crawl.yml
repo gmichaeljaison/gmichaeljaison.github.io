@@ -1,0 +1,14 @@
+name: Schedule Crawl
+
+on:
+  schedule:
+  - cron: "0 0 * * *"
+
+jobs:
+  crawl:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: download-html
+        run: curl https://www.mohfw.gov.in/index.html > x.htm
